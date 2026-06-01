@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-900 flex items-center justify-center min-h-screen">
+
+  <div class="bg-slate-800 p-6 rounded-xl shadow-lg w-80">
+
+    <h1 class="text-white text-center text-2xl font-bold mb-4">
+      Calculator
+    </h1>
+
+    <input
+      type="text"
+      id="display"
+      readonly
+      class="w-full h-14 text-right text-2xl px-3 mb-4 rounded bg-white"
+    >
+
+    <div class="grid grid-cols-4 gap-2">
+
+      <button onclick="clearDisplay()" class="bg-red-500 text-white p-3 rounded">AC</button>
+      <button onclick="deleteLast()" class="bg-yellow-500 text-white p-3 rounded">⌫</button>
+      <button onclick="appendValue('%')" class="bg-blue-500 text-white p-3 rounded">%</button>
+      <button onclick="appendValue('/')" class="bg-blue-500 text-white p-3 rounded">÷</button>
+
+      <button onclick="appendValue('7')" class="bg-gray-200 p-3 rounded">7</button>
+      <button onclick="appendValue('8')" class="bg-gray-200 p-3 rounded">8</button>
+      <button onclick="appendValue('9')" class="bg-gray-200 p-3 rounded">9</button>
+      <button onclick="appendValue('*')" class="bg-blue-500 text-white p-3 rounded">×</button>
+
+      <button onclick="appendValue('4')" class="bg-gray-200 p-3 rounded">4</button>
+      <button onclick="appendValue('5')" class="bg-gray-200 p-3 rounded">5</button>
+      <button onclick="appendValue('6')" class="bg-gray-200 p-3 rounded">6</button>
+      <button onclick="appendValue('-')" class="bg-blue-500 text-white p-3 rounded">−</button>
+
+      <button onclick="appendValue('1')" class="bg-gray-200 p-3 rounded">1</button>
+      <button onclick="appendValue('2')" class="bg-gray-200 p-3 rounded">2</button>
+      <button onclick="appendValue('3')" class="bg-gray-200 p-3 rounded">3</button>
+      <button onclick="appendValue('+')" class="bg-blue-500 text-white p-3 rounded">+</button>
+
+      <button onclick="appendValue('0')" class="bg-gray-200 p-3 rounded col-span-2">0</button>
+      <button onclick="appendValue('.')" class="bg-gray-200 p-3 rounded">.</button>
+      <button onclick="calculate()" class="bg-green-500 text-white p-3 rounded">=</button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
